@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="zh-Hans" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Blog搭建 | xuz's Blog</title><meta name="keywords" content="blog，hexo"><meta name="author" content="xuz10086,xuz10086@163.com"><meta name="copyright" content="xuz10086"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="个人blog搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog搭建">
+<meta property="og:url" content="https://xuz10086.github.io/2022/09/01/Blog/index.html">
+<meta property="og:site_name" content="xuz&#39;s Blog">
+<meta property="og:description" content="个人blog搭建">
+<meta property="og:locale">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h64to8kj30xc0k0tid.jpg">
+<meta property="article:published_time" content="2022-09-01T02:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-09T05:49:17.490Z">
+<meta property="article:author" content="xuz10086">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h64to8kj30xc0k0tid.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xuz10086.github.io/2022/09/01/Blog/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Blog搭建',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2022-09-09 13:49:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://tva1.sinaimg.cn/large/006y8mN6ly1g83h64to8kj30xc0k0tid.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xuz's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Blog搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-09-01T02:00:00.000Z" title="Created 2022-09-01 10:00:00">2022-09-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-09-09T05:49:17.490Z" title="Updated 2022-09-09 13:49:17">2022-09-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/hexo/">hexo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Blog搭建"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><p><strong>git</strong></p>
+<p><strong>node</strong></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>brew search node</span><br><span class="line"><span class="variable">$ </span>brew install node</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载</span></span><br><span class="line"><span class="variable">$ </span>sudo rm -rf /usr/local/&#123;bin/&#123;node,npm&#125;,lib/node_modules/npm,lib/node,share/man/*<span class="regexp">/node.*&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>下载hexo</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>npm install hexo-cli -g </span><br></pre></td></tr></table></figure>
+
+<p>初始化hexo项目</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init blog_xx (项目名)</span><br></pre></td></tr></table></figure>
+
+<p>进入blog_xx，安装相关依赖</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>cd blog</span><br><span class="line"><span class="comment"># 插件安装</span></span><br><span class="line"><span class="variable">$ </span>npm install</span><br><span class="line"><span class="comment"># 安装发布工具</span></span><br><span class="line"><span class="variable">$ </span>npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>启动本地项目</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo server</span><br></pre></td></tr></table></figure>
+
+<p>打开浏览访问，<a href="http://localholst:4000/">http://localholst:4000</a></p>
+<h2 id="Hexo项目介绍"><a href="#Hexo项目介绍" class="headerlink" title="Hexo项目介绍"></a>Hexo项目介绍</h2><h3 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node_modules  npm 文件缓存目录</span><br><span class="line">scaffolds     文夹件下存放的是文章、页面模版</span><br><span class="line">scource       文夹件下存放的是我们的资源文件</span><br><span class="line">themes        文件下存放的是我们的主题文件</span><br><span class="line">.gitignore    git 忽略文件，设置提交文件时，哪些文件不提交</span><br><span class="line">_config.yml   站点配置文件</span><br><span class="line">package.json  站点版本，站点依赖文件</span><br><span class="line">yarn.lock     yarn.lock 文件由 Yarn 自动创建，并且完全通过 Yarn 进行操作。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="GitHub-Hexo个人博客搭建"><a href="#GitHub-Hexo个人博客搭建" class="headerlink" title="GitHub Hexo个人博客搭建"></a>GitHub Hexo个人博客搭建</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>创建的仓库名称必须为 <code>username.github.io</code>，username 替换成你的 github 用户名</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/e6c9d24ely1h4zm0xtcqtj20t306nt9b.jpg"></p>
+<h3 id="添加本地SSH-key"><a href="#添加本地SSH-key" class="headerlink" title="添加本地SSH key"></a>添加本地SSH key</h3><h3 id="设置-hexo-配置文件-config-yml"><a href="#设置-hexo-配置文件-config-yml" class="headerlink" title="设置 hexo 配置文件 _config.yml"></a>设置 hexo 配置文件 _config.yml</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:username.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="部署项目到-GitHub"><a href="#部署项目到-GitHub" class="headerlink" title="部署项目到 GitHub"></a>部署项目到 GitHub</h3><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo clean</span><br><span class="line"><span class="variable">$ </span>hexo generate</span><br><span class="line"><span class="variable">$ </span>hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改blog主题"><a href="#修改blog主题" class="headerlink" title="修改blog主题"></a>修改blog主题</h3><ol>
+<li><p>可以在GitHub上搜索<code>hexo theme</code>，选择主题</p>
+</li>
+<li><p>使用命令下载主题，主题下载到你的<code>blog/themes</code>目录下（一般项目的readme.md中会附加项目下载地址）</p>
+</li>
+</ol>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>cd blog</span><br><span class="line"><span class="variable">$ </span>git clone -b master <span class="symbol">https:</span>/<span class="regexp">/github.com/jerryc</span>127/hexo-theme-butterfly.git themes/Butterfly</span><br><span class="line"><span class="variable">$ </span>npm i hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>应用主题</p>
+<p>修改hexo配置文件<code>_config.yml</code>，把主题改为<code>Butterfly</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">Butterfly</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果你没有pug以及stylus的渲染器，请下载安装： </p>
+<p>npm install hexo-renderer-jade hexo-renderer-stylus</p>
+</blockquote>
+</li>
+<li><p>*主题升级</p>
+<p>为方便主题升级，可将主题文件夹下的<code>_config.yml</code>复制到hexo的根目录下，并重命名为<code>_config.butterfly.yml</code>，以后只需在该配置文件中修改主题配置，Hexo会自动合併主题中的<code>_config.yml</code>和 <code>_config.butterfly.yml</code>里的配置，如果存在同名配置，会使用<code>_config.butterfly.yml</code>的配置，其优先度较高</p>
+</li>
+</ol>
+<h3 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h3><p>在hexo根目录下，执行命令，会在hexoRoot&#x2F;source目录下生成一个tags文件夹，并添加 <code>type: &quot;tags&quot;</code></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>基本内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2022-05-29 21:42:56</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h3><p>在hexo根目录下，执行命令，会在hexoRoot&#x2F;source目录下生成一个categories文件夹，并添加 <code>type: &quot;categories&quot;</code></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><p>在hexo根目录下，执行命令，会在hexoRoot&#x2F;source目录下生成一个link文件夹，并添加 <code>type: &quot;link&quot;</code></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo new page link</span><br></pre></td></tr></table></figure>
+
+<h4 id="友情链接页面添加友链信息"><a href="#友情链接页面添加友链信息" class="headerlink" title="友情链接页面添加友链信息"></a>友情链接页面添加友链信息</h4><p>前往 hexo&#x2F;source&#x2F;_data目录，创建一个link.yml文件</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">class:</span></span><br><span class="line"> <span class="attr">class_name:</span> <span class="string">友情链接</span></span><br><span class="line"> <span class="attr">class_desc:</span> <span class="string">高质量人群</span></span><br><span class="line"> <span class="attr">link_list:</span></span><br><span class="line">  <span class="attr">1:</span></span><br><span class="line">   <span class="attr">name:</span> <span class="string">纯洁</span></span><br><span class="line">   <span class="attr">link:</span> <span class="string">http://www.ityouknow.com/link.html</span></span><br><span class="line">   <span class="attr">avatar:</span> <span class="string">http://pic22.nipic.com/20120725/9676681_001949824394_2.jpg</span></span><br><span class="line">   <span class="attr">descr:</span> <span class="string">xxxxxxx</span></span><br><span class="line">  <span class="attr">2:</span></span><br><span class="line">   <span class="attr">name:</span> <span class="string">大帅比</span></span><br><span class="line">   <span class="attr">link:</span> <span class="string">https://xuz10086.github.io/</span></span><br><span class="line">   <span class="attr">avatar:</span> <span class="string">http://pic22.nipic.com/20120725/9676681_001949824394_2.jpg</span></span><br><span class="line">   <span class="attr">descr:</span> <span class="string">xx</span></span><br><span class="line"></span><br><span class="line"><span class="attr">class2:</span></span><br><span class="line"> <span class="attr">class_name:</span> <span class="string">失效友情链接</span></span><br><span class="line"> <span class="attr">class_desc:</span> <span class="string">人已失联，勿挂念</span></span><br><span class="line"> <span class="attr">link_list:</span></span><br><span class="line">  <span class="attr">1:</span></span><br><span class="line">   <span class="attr">name:</span> <span class="string">xx</span></span><br><span class="line">   <span class="attr">link:</span> <span class="string">http://www.ityouknow.com/link.html</span></span><br><span class="line">   <span class="attr">avatar:</span> <span class="string">http://pic22.nipic.com/20120725/9676681_001949824394_2.jpg</span></span><br><span class="line">   <span class="attr">descr:</span> <span class="string">xx</span></span><br><span class="line">  <span class="attr">2:</span></span><br><span class="line">   <span class="attr">name:</span> <span class="string">xx</span></span><br><span class="line">   <span class="attr">link:</span> <span class="string">http://www.ityouknow.com/link.html</span></span><br><span class="line">   <span class="attr">avatar:</span> <span class="string">http://pic22.nipic.com/20120725/9676681_001949824394_2.jpg</span></span><br><span class="line">   <span class="attr">descr:</span> <span class="string">xx</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="图库"><a href="#图库" class="headerlink" title="图库"></a>图库</h3><p>在hexo根目录下，执行命令，会在hexoRoot&#x2F;source目录下生成一个pictures文件夹，然后使用标签外挂 galleryGroup，具体用法请查看对应的内容</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo new page pictures</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><h2 id="服务器-Hexo个人博客搭建"><a href="#服务器-Hexo个人博客搭建" class="headerlink" title="服务器 Hexo个人博客搭建"></a>服务器 Hexo个人博客搭建</h2><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>打开系统权限: sudo -s</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo clean 清除本地静态文件，若未生成过静态文件可以忽略</span><br><span class="line"><span class="variable">$ </span>hexo generate (hexo g) 生成静态文件</span><br><span class="line"><span class="variable">$ </span>hexo deploy (hexo d) 提交到远程仓库</span><br><span class="line"><span class="variable">$ </span>hexo new page <span class="string">&quot;xx&quot;</span>(hexo n page) 创建页面 </span><br><span class="line"><span class="variable">$ </span>hexo new <span class="string">&quot;xx&quot;</span> (hexo n <span class="string">&quot;&quot;</span>) 创建文章</span><br><span class="line"><span class="variable">$ </span>hexo d -g 生成静态并提交到远程仓库</span><br><span class="line"><span class="variable">$ </span>hexo s -g 生成静态文件并启动本地预览</span><br><span class="line"><span class="variable">$ </span>hexo server (hexo s) 启动本地服务，基本本地预览看看</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><h4 id="1-Page-Front-matter-用于页面配置"><a href="#1-Page-Front-matter-用于页面配置" class="headerlink" title="1.Page Front-matter 用于页面配置"></a>1.Page Front-matter 用于页面配置</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">updated:</span><br><span class="line">type:</span><br><span class="line">comments:</span><br><span class="line">description:</span><br><span class="line">keywords:</span><br><span class="line">top_img:</span><br><span class="line">mathjax:</span><br><span class="line">katex:</span><br><span class="line">aside:</span><br><span class="line">aplayer:</span><br><span class="line">highlight_shrink:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td>【必需】页面标题</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td>【必需】页面创建日期</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td>【必需】标签、分类和友情链接三个页面需要配置</td>
+</tr>
+<tr>
+<td align="left">update</td>
+<td>【可选】页面更新日期</td>
+</tr>
+<tr>
+<td align="left">description</td>
+<td>【可选】页面描述</td>
+</tr>
+<tr>
+<td align="left">keywords</td>
+<td>【可选】页面关键字</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td>【可选】显示页面评论模块(默认 true)</td>
+</tr>
+<tr>
+<td align="left">top_img</td>
+<td>【可选】页面顶部图片</td>
+</tr>
+<tr>
+<td align="left">mathjax</td>
+<td>【可选】显示mathjax(当设置mathjax的per_page: false时，才需要配置，默认 false)</td>
+</tr>
+<tr>
+<td align="left">katex</td>
+<td>【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false)</td>
+</tr>
+<tr>
+<td align="left">aside</td>
+<td>【可选】显示侧边栏 (默认 true)</td>
+</tr>
+<tr>
+<td align="left">aplayer</td>
+<td>【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置</td>
+</tr>
+<tr>
+<td align="left">highlight_shrink</td>
+<td>【可选】配置代码框是否展开(true&#x2F;false)(默认为设置中highlight_shrink的配置)</td>
+</tr>
+</tbody></table>
+<h4 id="2-Post-Front-matter用于文章配置"><a href="#2-Post-Front-matter用于文章配置" class="headerlink" title="2.Post Front-matter用于文章配置"></a>2.Post Front-matter用于文章配置</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">updated:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">keywords:</span><br><span class="line">description:</span><br><span class="line">top_img:</span><br><span class="line">comments:</span><br><span class="line">cover:</span><br><span class="line">toc:</span><br><span class="line">toc_number:</span><br><span class="line">toc_style_simple:</span><br><span class="line">copyright:</span><br><span class="line">copyright_author:</span><br><span class="line">copyright_author_href:</span><br><span class="line">copyright_url:</span><br><span class="line">copyright_info:</span><br><span class="line">mathjax:</span><br><span class="line">katex:</span><br><span class="line">aplayer:</span><br><span class="line">highlight_shrink:</span><br><span class="line">aside:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td>【必需】文章标题</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td>【必需】文章创建日期</td>
+</tr>
+<tr>
+<td align="left">updated</td>
+<td>【可选】文章更新日期</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td>【可选】文章标签</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td>【可选】文章分类</td>
+</tr>
+<tr>
+<td align="left">keywords</td>
+<td>【可选】文章关键字</td>
+</tr>
+<tr>
+<td align="left">description</td>
+<td>【可选】文章描述</td>
+</tr>
+<tr>
+<td align="left">top_img</td>
+<td>【可选】文章顶部图片</td>
+</tr>
+<tr>
+<td align="left">cover</td>
+<td>【可选】文章缩略图(如果没有设置top_img,文章页顶部将显示缩略图，可设为false&#x2F;图片地址&#x2F;留空)</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td>【可选】显示文章评论模块(默认 true)</td>
+</tr>
+<tr>
+<td align="left">toc</td>
+<td>【可选】显示文章TOC(默认为设置中toc的enable配置)</td>
+</tr>
+<tr>
+<td align="left">toc_number</td>
+<td>【可选】显示toc_number(默认为设置中toc的number配置)</td>
+</tr>
+<tr>
+<td align="left">toc_style_simple</td>
+<td>【可选】显示 toc 简洁模式</td>
+</tr>
+<tr>
+<td align="left">copyright</td>
+<td>【可选】显示文章版权模块(默认为设置中post_copyright的enable配置)</td>
+</tr>
+<tr>
+<td align="left">copyright_author</td>
+<td>【可选】文章版权模块的文章作者</td>
+</tr>
+<tr>
+<td align="left">copyright_author_href</td>
+<td>【可选】文章版权模块的文章作者链接</td>
+</tr>
+<tr>
+<td align="left">copyright_url</td>
+<td>【可选】文章版权模块的文章连结链接</td>
+</tr>
+<tr>
+<td align="left">copyright_info</td>
+<td>【可选】文章版权模块的版权声明文字</td>
+</tr>
+<tr>
+<td align="left">mathjax</td>
+<td>【可选】显示mathjax(当设置mathjax的per_page: false时，才需要配置，默认 false)</td>
+</tr>
+<tr>
+<td align="left">katex</td>
+<td>【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false)</td>
+</tr>
+<tr>
+<td align="left">aplayer</td>
+<td>【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置</td>
+</tr>
+<tr>
+<td align="left">highlight_shrink</td>
+<td>【可选】配置代码框是否展开(true&#x2F;false)(默认为设置中highlight_shrink的配置)</td>
+</tr>
+<tr>
+<td align="left">aside</td>
+<td>【可选】显示侧边栏 (默认 true)</td>
+</tr>
+</tbody></table>
+<p>例子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Linux命令行</span><br><span class="line">tags: </span><br><span class="line"> - Linux</span><br><span class="line"> - 命令行</span><br><span class="line">categories: Linux</span><br><span class="line">keywords: &#x27;Linux,Linux目录,常用命令&#x27;</span><br><span class="line">description: Linux知识整理，主要是命令行介绍</span><br><span class="line">cover: </span><br><span class="line">date: 2019-10-9 20:00:00</span><br><span class="line">updated:</span><br><span class="line">top_img:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://xuz10086.github.io">xuz10086</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://xuz10086.github.io/2022/09/01/Blog/">https://xuz10086.github.io/2022/09/01/Blog/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/blog/">blog</a><a class="post-meta__tags" href="/tags/hexo/">hexo</a></div><div class="post_share"><div class="social-share" data-image="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h64to8kj30xc0k0tid.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/09/01/GitHub/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h67uq55j30xc0jltnf.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">github</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xuz10086</div><div class="author-info__description">xuz's blog | java | 个人</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><a id="card-info-btn" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-number">1.</span> <span class="toc-text">环境要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">2.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">Hexo项目介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.1.</span> <span class="toc-text">目录介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub-Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="toc-number">4.</span> <span class="toc-text">GitHub Hexo个人博客搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">4.1.</span> <span class="toc-text">创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0SSH-key"><span class="toc-number">4.2.</span> <span class="toc-text">添加本地SSH key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE-hexo-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-config-yml"><span class="toc-number">4.3.</span> <span class="toc-text">设置 hexo 配置文件 _config.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0-GitHub"><span class="toc-number">4.4.</span> <span class="toc-text">部署项目到 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9blog%E4%B8%BB%E9%A2%98"><span class="toc-number">4.5.</span> <span class="toc-text">修改blog主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="toc-number">4.6.</span> <span class="toc-text">标签页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E9%A1%B5"><span class="toc-number">4.7.</span> <span class="toc-text">分类页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5"><span class="toc-number">4.8.</span> <span class="toc-text">友情链接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E4%BF%A1%E6%81%AF"><span class="toc-number">4.8.1.</span> <span class="toc-text">友情链接页面添加友链信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BA%93"><span class="toc-number">4.9.</span> <span class="toc-text">图库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">4.10.</span> <span class="toc-text">参考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8-Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="toc-number">5.</span> <span class="toc-text">服务器 Hexo个人博客搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0"><span class="toc-number">7.</span> <span class="toc-text">文章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Front-matter"><span class="toc-number">7.1.</span> <span class="toc-text">Front-matter</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Page-Front-matter-%E7%94%A8%E4%BA%8E%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE"><span class="toc-number">7.1.1.</span> <span class="toc-text">1.Page Front-matter 用于页面配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Post-Front-matter%E7%94%A8%E4%BA%8E%E6%96%87%E7%AB%A0%E9%85%8D%E7%BD%AE"><span class="toc-number">7.1.2.</span> <span class="toc-text">2.Post Front-matter用于文章配置</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/09/01/Blog/" title="Blog搭建"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h64to8kj30xc0k0tid.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Blog搭建"/></a><div class="content"><a class="title" href="/2022/09/01/Blog/" title="Blog搭建">Blog搭建</a><time datetime="2022-09-01T02:00:00.000Z" title="Created 2022-09-01 10:00:00">2022-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/01/GitHub/" title="github"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h67uq55j30xc0jltnf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="github"/></a><div class="content"><a class="title" href="/2022/09/01/GitHub/" title="github">github</a><time datetime="2022-09-01T02:00:00.000Z" title="Created 2022-09-01 10:00:00">2022-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/%E7%BA%BF%E7%A8%8B/" title="线程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h67uq55j30xc0jltnf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线程"/></a><div class="content"><a class="title" href="/2022/04/11/%E7%BA%BF%E7%A8%8B/" title="线程">线程</a><time datetime="2022-04-11T02:00:00.000Z" title="Created 2022-04-11 10:00:00">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/11/Docker/" title="Docker"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h67uq55j30xc0jltnf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker"/></a><div class="content"><a class="title" href="/2020/04/11/Docker/" title="Docker">Docker</a><time datetime="2020-04-11T02:00:00.000Z" title="Created 2020-04-11 10:00:00">2020-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/11/Redis/" title="Redis总结"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/006y8mN6ly1g83h64to8kj30xc0k0tid.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis总结"/></a><div class="content"><a class="title" href="/2020/04/11/Redis/" title="Redis总结">Redis总结</a><time datetime="2020-04-11T02:00:00.000Z" title="Created 2020-04-11 10:00:00">2020-04-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By xuz10086</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
